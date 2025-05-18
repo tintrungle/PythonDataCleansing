@@ -3662,3 +3662,221 @@ FROM table_0bbd7d08fcf7f229e43759cacfd72270;
 df_result = execute_sql_query(query)
 result = {'type': 'dataframe', 'value': df_result}
 2025-05-18 14:09:30 [INFO] Response generated successfully.
+2025-05-18 14:14:27 [INFO] Question: Plot total cases pm values against total deaths pm values
+2025-05-18 14:14:28 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 14:14:28 [INFO] Prompt ID: f3093c37-844d-4cbb-8250-64f62bd5ddb7
+2025-05-18 14:14:28 [INFO] Generating new code...
+2025-05-18 14:14:28 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Plot total cases pm values against total deaths pm values
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 14:14:32 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 14:14:32 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Write code here
+def execute_sql_query(sql_query: str) -> pd.Dataframe:
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+    pass
+
+sql_query = """
+SELECT total_cases_pm, total_deaths_pm
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+df = execute_sql_query(sql_query)
+
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x='total_cases_pm', y='total_deaths_pm', data=df)
+plt.xlabel('Total Cases per Million')
+plt.ylabel('Total Deaths per Million')
+plt.title('Total Cases per Million vs. Total Deaths per Million')
+plt.savefig('temp_chart.png')
+
+
+# Declare result var: 
+result = { "type": "plot", "value": "temp_chart.png" }
+2025-05-18 14:14:32 [INFO] Validating code requirements...
+2025-05-18 14:14:32 [INFO] Code validation successful.
+2025-05-18 14:14:32 [INFO] Cleaning the generated code...
+2025-05-18 14:14:32 [INFO] Executing code: import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+sql_query = """
+SELECT total_cases_pm, total_deaths_pm
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+df = execute_sql_query(sql_query)
+plt.figure(figsize=(10, 6))
+sns.scatterplot(x='total_cases_pm', y='total_deaths_pm', data=df)
+plt.xlabel('Total Cases per Million')
+plt.ylabel('Total Deaths per Million')
+plt.title('Total Cases per Million vs. Total Deaths per Million')
+plt.savefig('exports/charts/temp_chart_c7ef5dc7-95b9-4fcb-9fb2-5a32709d3177.png')
+result = {'type': 'plot', 'value': 'exports/charts/temp_chart_c7ef5dc7-95b9-4fcb-9fb2-5a32709d3177.png'}
+2025-05-18 14:14:32 [INFO] Response generated successfully.
+2025-05-18 14:14:53 [INFO] Question: Use regplot to show total deaths pm against total cases pm without extreme values
+2025-05-18 14:14:53 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 14:14:53 [INFO] Prompt ID: 26803c13-e672-4d78-8a8e-683c313b44d4
+2025-05-18 14:14:53 [INFO] Generating new code...
+2025-05-18 14:14:53 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Use regplot to show total deaths pm against total cases pm without extreme values
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 14:15:04 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 14:15:04 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Write code here
+def execute_sql_query(sql_query: str) -> pd.Dataframe:
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+    # Assuming you have a way to execute SQL queries and get a DataFrame back
+    # Replace this with your actual database connection and query execution logic
+    # This is a placeholder example
+    data = {'lastdate': ['2024-02-04', '2024-01-28', '2023-12-03', '2023-09-17', '2023-05-07'],
+            'location': ['Afghanistan', 'Albania', 'Algeria', 'American Samoa', 'Andorra'],
+            'total_cases': [231539.0, 334863.0, 272010.0, 8359.0, 48015.0],
+            'total_deaths': [7982.0, 3605.0, 6881.0, 34.0, 159.0],
+            'total_cases_pm': [5629.611, 117813.348, 6057.694, 188712.044, 601367.684],
+            'total_deaths_pm': [194.073, 1268.331, 153.241, 767.581, 1991.408],
+            'population': [41128772, 2842318, 44903228, 44295, 79843],
+           }
+    df = pd.DataFrame(data)
+    return df
+    
+
+sql_query = """
+SELECT total_cases_pm, total_deaths_pm
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+df = execute_sql_query(sql_query)
+
+# Remove extreme values based on IQR
+Q1 = df.quantile(0.25)
+Q3 = df.quantile(0.75)
+IQR = Q3 - Q1
+
+df_filtered = df[~((df < (Q1 - 1.5 * IQR)) | (df > (Q3 + 1.5 * IQR))).any(axis=1)]
+
+
+plt.figure(figsize=(8, 6))
+sns.regplot(x="total_cases_pm", y="total_deaths_pm", data=df_filtered)
+plt.title("Regplot of Total Deaths PM vs. Total Cases PM (without extreme values)")
+plt.xlabel("Total Cases PM")
+plt.ylabel("Total Deaths PM")
+plt.savefig("temp_chart.png")
+
+
+# Declare result var: 
+result = {
+    "type": "plot",
+    "value": "temp_chart.png"
+}
+2025-05-18 14:15:04 [INFO] Validating code requirements...
+2025-05-18 14:15:04 [INFO] Code validation successful.
+2025-05-18 14:15:04 [INFO] Cleaning the generated code...
+2025-05-18 14:15:04 [INFO] Executing code: import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+sql_query = """
+SELECT total_cases_pm, total_deaths_pm
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+df = execute_sql_query(sql_query)
+Q1 = df.quantile(0.25)
+Q3 = df.quantile(0.75)
+IQR = Q3 - Q1
+df_filtered = df[~((df < Q1 - 1.5 * IQR) | (df > Q3 + 1.5 * IQR)).any(axis=1)]
+plt.figure(figsize=(8, 6))
+sns.regplot(x='total_cases_pm', y='total_deaths_pm', data=df_filtered)
+plt.title('Regplot of Total Deaths PM vs. Total Cases PM (without extreme values)')
+plt.xlabel('Total Cases PM')
+plt.ylabel('Total Deaths PM')
+plt.savefig('exports/charts/temp_chart_6eabd98e-d79f-442a-a381-91e108f2a539.png')
+result = {'type': 'plot', 'value': 'exports/charts/temp_chart_6eabd98e-d79f-442a-a381-91e108f2a539.png'}
+2025-05-18 14:15:04 [INFO] Response generated successfully.
