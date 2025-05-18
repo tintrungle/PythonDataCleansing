@@ -1,0 +1,3664 @@
+2025-05-18 13:12:31 [INFO] Question: Show me some information about the data
+2025-05-18 13:12:31 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:12:31 [INFO] Prompt ID: af4929d2-fba0-4dee-8e92-68827b9cf2d0
+2025-05-18 13:12:31 [INFO] Generating new code...
+2025-05-18 13:12:31 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me some information about the data
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:12:34 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:12:34 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+sql_query = """
+SELECT *
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+LIMIT 5;
+"""
+
+df_result = execute_sql_query(sql_query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:12:34 [INFO] Validating code requirements...
+2025-05-18 13:12:34 [INFO] Code validation successful.
+2025-05-18 13:12:34 [INFO] Cleaning the generated code...
+2025-05-18 13:12:34 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT *
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+LIMIT 5;
+"""
+df_result = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:12:36 [INFO] Response generated successfully.
+2025-05-18 13:18:21 [INFO] Question: Show me some information about the data
+2025-05-18 13:18:21 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:18:21 [INFO] Prompt ID: 0bbc15ea-3c62-49df-b67b-35d3a84a465a
+2025-05-18 13:18:21 [INFO] Generating new code...
+2025-05-18 13:18:21 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me some information about the data
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:18:24 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:18:24 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+sql_query = """
+SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5;
+"""
+df_result = execute_sql_query(sql_query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:18:24 [INFO] Validating code requirements...
+2025-05-18 13:18:24 [INFO] Code validation successful.
+2025-05-18 13:18:24 [INFO] Cleaning the generated code...
+2025-05-18 13:18:24 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5;
+"""
+df_result = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:18:24 [INFO] Response generated successfully.
+2025-05-18 13:22:03 [INFO] Question: Show me some information about the data
+2025-05-18 13:22:03 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:22:03 [INFO] Prompt ID: 79de7ab9-1f7e-446e-8b97-b3baf5d731fe
+2025-05-18 13:22:03 [INFO] Generating new code...
+2025-05-18 13:22:03 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me some information about the data
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:22:06 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:22:06 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5;
+"""
+df = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df}
+2025-05-18 13:22:06 [INFO] Validating code requirements...
+2025-05-18 13:22:06 [INFO] Code validation successful.
+2025-05-18 13:22:06 [INFO] Cleaning the generated code...
+2025-05-18 13:22:06 [INFO] Executing code: import pandas as pd
+query = """
+SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5;
+"""
+df = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df}
+2025-05-18 13:22:06 [INFO] Response generated successfully.
+2025-05-18 13:27:04 [INFO] Question: Show first five rows
+2025-05-18 13:27:04 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:27:04 [INFO] Prompt ID: 7abba3ba-2669-44dc-8cb6-98f80678b8c8
+2025-05-18 13:27:04 [INFO] Generating new code...
+2025-05-18 13:27:04 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show first five rows
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:27:07 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:27:07 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = "SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5"
+df = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df}
+2025-05-18 13:27:07 [INFO] Validating code requirements...
+2025-05-18 13:27:07 [INFO] Code validation successful.
+2025-05-18 13:27:07 [INFO] Cleaning the generated code...
+2025-05-18 13:27:07 [INFO] Executing code: import pandas as pd
+query = 'SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5'
+df = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df}
+2025-05-18 13:27:07 [INFO] Response generated successfully.
+2025-05-18 13:28:26 [INFO] Question: show total cases for locations with the five most total cases
+2025-05-18 13:28:26 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:28:26 [INFO] Prompt ID: 1952138c-5149-49c0-b396-e2fc4e0ef53c
+2025-05-18 13:28:26 [INFO] Generating new code...
+2025-05-18 13:28:26 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ show total cases for locations with the five most total cases
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:28:29 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:28:29 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT total_cases
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+ORDER BY total_cases DESC
+LIMIT 5;
+"""
+df = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df}
+2025-05-18 13:28:29 [INFO] Validating code requirements...
+2025-05-18 13:28:29 [INFO] Code validation successful.
+2025-05-18 13:28:29 [INFO] Cleaning the generated code...
+2025-05-18 13:28:29 [INFO] Executing code: import pandas as pd
+query = """
+SELECT total_cases
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+ORDER BY total_cases DESC
+LIMIT 5;
+"""
+df = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df}
+2025-05-18 13:28:29 [INFO] Response generated successfully.
+2025-05-18 13:29:56 [INFO] Question: Show total cases pm, total deaths pm, and location for locations with the 10 highest total cases pm.
+2025-05-18 13:29:56 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:29:56 [INFO] Prompt ID: e893adb6-7074-466c-a010-9ffa50fa8407
+2025-05-18 13:29:56 [INFO] Generating new code...
+2025-05-18 13:29:56 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show total cases pm, total deaths pm, and location for locations with the 10 highest total cases pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:29:59 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:29:59 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT total_cases_pm, total_deaths_pm, location
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+ORDER BY total_cases_pm DESC
+LIMIT 10;
+
+"""
+df = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df}
+2025-05-18 13:29:59 [INFO] Validating code requirements...
+2025-05-18 13:29:59 [INFO] Code validation successful.
+2025-05-18 13:29:59 [INFO] Cleaning the generated code...
+2025-05-18 13:29:59 [INFO] Executing code: import pandas as pd
+query = """
+SELECT total_cases_pm, total_deaths_pm, location
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+ORDER BY total_cases_pm DESC
+LIMIT 10;
+
+"""
+df = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df}
+2025-05-18 13:29:59 [INFO] Response generated successfully.
+2025-05-18 13:31:19 [INFO] Question: Select total cases pm, total deaths pm, and location.
+2025-05-18 13:31:19 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:31:19 [INFO] Prompt ID: 33272f5a-4019-4ab9-a99a-d51a50fd948b
+2025-05-18 13:31:19 [INFO] Generating new code...
+2025-05-18 13:31:19 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Select total cases pm, total deaths pm, and location.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:31:23 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:31:23 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+def execute_sql_query(sql_query: str) -> pd.Dataframe:
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+    pass
+
+sql_query = """
+SELECT total_cases_pm, total_deaths_pm, location
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+
+result_df = execute_sql_query(sql_query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": result_df}
+2025-05-18 13:31:23 [INFO] Validating code requirements...
+2025-05-18 13:31:23 [INFO] Code validation successful.
+2025-05-18 13:31:23 [INFO] Cleaning the generated code...
+2025-05-18 13:31:23 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT total_cases_pm, total_deaths_pm, location
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+result_df = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': result_df}
+2025-05-18 13:31:23 [INFO] Response generated successfully.
+2025-05-18 13:34:27 [INFO] Question: Show total cases pm and location where total cases pm greater than 95th percentile
+2025-05-18 13:34:27 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:34:27 [INFO] Prompt ID: 5ddd4f51-7cbd-4a00-b77f-2482d8f098fd
+2025-05-18 13:34:27 [INFO] Generating new code...
+2025-05-18 13:34:27 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show total cases pm and location where total cases pm greater than 95th percentile
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:34:34 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:34:34 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+def execute_sql_query(sql_query: str) -> pd.Dataframe:
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+    # Assuming you have a way to connect to your database and execute queries
+    # Replace this with your actual database connection and query execution logic
+    # This is just a placeholder for demonstration purposes
+    try:
+        # Example using pandas with a CSV file (replace with your database connection)
+        df = pd.read_csv("table_0bbd7d08fcf7f229e43759cacfd72270.csv")
+        return df.query(sql_query.replace("SELECT", ""))
+    except Exception as e:
+        print(f"Error executing SQL query: {e}")
+        return pd.DataFrame()
+
+query = """SELECT total_cases_pm, location FROM table_0bbd7d08fcf7f229e43759cacfd72270 WHERE total_cases_pm > PERCENTILE_CONT(0.95) WITHIN GROUP (ORDER BY total_cases_pm)"""
+df_result = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:34:34 [INFO] Validating code requirements...
+2025-05-18 13:34:34 [INFO] Code validation successful.
+2025-05-18 13:34:34 [INFO] Cleaning the generated code...
+2025-05-18 13:34:34 [INFO] Executing code: import pandas as pd
+query = 'SELECT total_cases_pm, location FROM table_0bbd7d08fcf7f229e43759cacfd72270 WHERE total_cases_pm > PERCENTILE_CONT(0.95) WITHIN GROUP (ORDER BY total_cases_pm)'
+df_result = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:34:34 [INFO] Retrying execution (1/3)...
+2025-05-18 13:34:34 [INFO] Execution failed with error: Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 29, in execute
+    exec(code, self._environment)
+  File "<string>", line 3, in <module>
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 150, in _execute_sql_query
+    return db_manager.sql(final_query).df()
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/data_loader/duck_db_connection_manager.py", line 32, in sql
+    return self.connection.sql(query, params=params)
+duckdb.duckdb.BinderException: Binder Error: WHERE clause cannot contain aggregates!
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 186, in execute_with_retries
+    result = self.execute_code(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 118, in execute_code
+    return code_executor.execute_and_return_result(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 38, in execute_and_return_result
+    self.execute(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 31, in execute
+    raise CodeExecutionError("Code execution failed") from e
+pandasai.exceptions.CodeExecutionError: Code execution failed
+
+2025-05-18 13:34:34 [INFO] Using Prompt: <table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+The user asked the following question:
+### QUERY
+ Show total cases pm and location where total cases pm greater than 95th percentile
+
+You generated the following Python code:
+import pandas as pd
+query = 'SELECT total_cases_pm, location FROM table_0bbd7d08fcf7f229e43759cacfd72270 WHERE total_cases_pm > PERCENTILE_CONT(0.95) WITHIN GROUP (ORDER BY total_cases_pm)'
+df_result = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df_result}
+
+However, it resulted in the following error:
+Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 29, in execute
+    exec(code, self._environment)
+  File "<string>", line 3, in <module>
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 150, in _execute_sql_query
+    return db_manager.sql(final_query).df()
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/data_loader/duck_db_connection_manager.py", line 32, in sql
+    return self.connection.sql(query, params=params)
+duckdb.duckdb.BinderException: Binder Error: WHERE clause cannot contain aggregates!
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 186, in execute_with_retries
+    result = self.execute_code(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 118, in execute_code
+    return code_executor.execute_and_return_result(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 38, in execute_and_return_result
+    self.execute(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 31, in execute
+    raise CodeExecutionError("Code execution failed") from e
+pandasai.exceptions.CodeExecutionError: Code execution failed
+
+
+Fix the python code above and return the new python code but the code generated should use execute_sql_query function
+2025-05-18 13:34:45 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:34:45 [INFO] Code Generated:
+import pandas as pd
+
+def execute_sql_query(query):
+    # This is a placeholder, replace with your actual database connection and query execution logic
+    # Example using pandas for demonstration:
+    data = {'lastdate': ['2024-02-04', '2024-01-28', '2023-12-03', '2023-09-17', '2023-05-07'],
+            'location': ['Afghanistan', 'Albania', 'Algeria', 'American Samoa', 'Andorra'],
+            'total_cases': [231539.0, 334863.0, 272010.0, 8359.0, 48015.0],
+            'total_deaths': [7982.0, 3605.0, 6881.0, 34.0, 159.0],
+            'total_cases_pm': [5629.611, 117813.348, 6057.694, 188712.044, 601367.684],
+            'total_deaths_pm': [194.073, 1268.331, 153.241, 767.581, 1991.408],
+            'population': [41128772, 2842318, 44903228, 44295, 79843],
+            'pop_density': [54.422, 104.871, 17.348, 278.205, 163.755]}
+    df = pd.DataFrame(data)
+    return df.query(query.replace("table_0bbd7d08fcf7f229e43759cacfd72270", ""))
+
+
+query = """
+SELECT total_cases_pm, location
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+WHERE total_cases_pm > (SELECT PERCENTILE_CONT(0.95) WITHIN GROUP (ORDER BY total_cases_pm) FROM table_0bbd7d08fcf7f229e43759cacfd72270)
+"""
+
+df_result = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df_result}
+
+print(result)
+2025-05-18 13:34:45 [INFO] Validating code requirements...
+2025-05-18 13:34:45 [INFO] Code validation successful.
+2025-05-18 13:34:45 [INFO] Cleaning the generated code...
+2025-05-18 13:34:45 [INFO] Executing code: import pandas as pd
+query = """
+SELECT total_cases_pm, location
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+WHERE total_cases_pm > (SELECT PERCENTILE_CONT(0.95) WITHIN GROUP (ORDER BY total_cases_pm) FROM table_0bbd7d08fcf7f229e43759cacfd72270)
+"""
+df_result = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df_result}
+print(result)
+2025-05-18 13:34:45 [INFO] Response generated successfully.
+2025-05-18 13:36:17 [INFO] Question: Summarize values for total cases pm and total deaths pm.
+2025-05-18 13:36:17 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:36:17 [INFO] Prompt ID: 45c18a4b-f41b-44af-b66c-fb81c9b0a36e
+2025-05-18 13:36:17 [INFO] Generating new code...
+2025-05-18 13:36:17 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Summarize values for total cases pm and total deaths pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:36:20 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:36:20 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+result_df = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": result_df}
+2025-05-18 13:36:20 [INFO] Validating code requirements...
+2025-05-18 13:36:20 [INFO] Code validation successful.
+2025-05-18 13:36:20 [INFO] Cleaning the generated code...
+2025-05-18 13:36:20 [INFO] Executing code: import pandas as pd
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+result_df = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': result_df}
+2025-05-18 13:36:20 [INFO] Response generated successfully.
+2025-05-18 13:36:44 [INFO] Question: Show me some information about the data
+2025-05-18 13:36:44 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:36:44 [INFO] Prompt ID: 6179c923-344f-430e-8afe-da81d82b57b2
+2025-05-18 13:36:44 [INFO] Generating new code...
+2025-05-18 13:36:44 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me some information about the data
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:36:47 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:36:47 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT *
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+LIMIT 5;
+"""
+df_result = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:36:47 [INFO] Validating code requirements...
+2025-05-18 13:36:47 [INFO] Code validation successful.
+2025-05-18 13:36:47 [INFO] Cleaning the generated code...
+2025-05-18 13:36:47 [INFO] Executing code: import pandas as pd
+query = """
+SELECT *
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+LIMIT 5;
+"""
+df_result = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:36:47 [INFO] Response generated successfully.
+2025-05-18 13:37:00 [INFO] Question: Summarize values for total cases pm and total deaths pm.
+2025-05-18 13:37:00 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:37:00 [INFO] Prompt ID: d2b52290-8238-4417-bdca-a345731bc0bd
+2025-05-18 13:37:00 [INFO] Generating new code...
+2025-05-18 13:37:00 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Summarize values for total cases pm and total deaths pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:37:03 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:37:03 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+sql_query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+
+result_df = execute_sql_query(sql_query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": result_df}
+2025-05-18 13:37:03 [INFO] Validating code requirements...
+2025-05-18 13:37:03 [INFO] Code validation successful.
+2025-05-18 13:37:03 [INFO] Cleaning the generated code...
+2025-05-18 13:37:03 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+result_df = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': result_df}
+2025-05-18 13:37:03 [INFO] Response generated successfully.
+2025-05-18 13:37:52 [INFO] Question: Summarize values for total cases pm and total deaths pm.
+2025-05-18 13:37:52 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:37:52 [INFO] Prompt ID: 1a36e46b-6bd4-4be7-a97c-4d9b795ede36
+2025-05-18 13:37:52 [INFO] Generating new code...
+2025-05-18 13:37:52 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Summarize values for total cases pm and total deaths pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:37:55 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:37:55 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+df_result = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:37:55 [INFO] Validating code requirements...
+2025-05-18 13:37:55 [INFO] Code validation successful.
+2025-05-18 13:37:55 [INFO] Cleaning the generated code...
+2025-05-18 13:37:55 [INFO] Executing code: import pandas as pd
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+df_result = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:37:55 [INFO] Response generated successfully.
+2025-05-18 13:38:10 [INFO] Question: Show me some information about the data
+2025-05-18 13:38:10 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:38:10 [INFO] Prompt ID: 5c6823ce-15a3-47ea-bf50-112193ac0ab6
+2025-05-18 13:38:10 [INFO] Generating new code...
+2025-05-18 13:38:10 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me some information about the data
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:38:15 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:38:15 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+def execute_sql_query(sql_query: str) -> pd.Dataframe:
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+    # This is a placeholder, replace with actual database connection and query execution
+    try:
+        # Assuming you have a database connection named 'conn'
+        # Example using duckdb (replace with your database connection)
+        import duckdb
+        conn = duckdb.connect()
+        df = conn.execute(sql_query).df()
+        conn.close()
+        return df
+    except Exception as e:
+        print(f"Error executing SQL query: {e}")
+        return None
+
+
+sql_query = """
+SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5;
+"""
+
+df_result = execute_sql_query(sql_query)
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:38:15 [INFO] Validating code requirements...
+2025-05-18 13:38:15 [INFO] Code validation successful.
+2025-05-18 13:38:15 [INFO] Cleaning the generated code...
+2025-05-18 13:38:15 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5;
+"""
+df_result = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:38:15 [INFO] Response generated successfully.
+2025-05-18 13:38:22 [INFO] Question: Summarize values for total cases pm and total deaths pm.
+2025-05-18 13:38:22 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:38:22 [INFO] Prompt ID: a8b5973a-67d6-450a-b374-d31686fd64d1
+2025-05-18 13:38:22 [INFO] Generating new code...
+2025-05-18 13:38:22 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Summarize values for total cases pm and total deaths pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:38:26 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:38:26 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+result_df = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": result_df}
+2025-05-18 13:38:26 [INFO] Validating code requirements...
+2025-05-18 13:38:26 [INFO] Code validation successful.
+2025-05-18 13:38:26 [INFO] Cleaning the generated code...
+2025-05-18 13:38:26 [INFO] Executing code: import pandas as pd
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+result_df = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': result_df}
+2025-05-18 13:38:26 [INFO] Response generated successfully.
+2025-05-18 13:38:55 [INFO] Question: Show me some information about the data
+2025-05-18 13:38:55 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:38:56 [INFO] Prompt ID: f63c218a-68af-4304-838e-ffafba782b74
+2025-05-18 13:38:56 [INFO] Generating new code...
+2025-05-18 13:38:56 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me some information about the data
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:38:58 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:38:58 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5;
+"""
+df_result = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:38:58 [INFO] Validating code requirements...
+2025-05-18 13:38:58 [INFO] Code validation successful.
+2025-05-18 13:38:58 [INFO] Cleaning the generated code...
+2025-05-18 13:38:58 [INFO] Executing code: import pandas as pd
+query = """
+SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5;
+"""
+df_result = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:38:58 [INFO] Response generated successfully.
+2025-05-18 13:39:26 [INFO] Question: Summarize values for total cases pm and total deaths pm.
+2025-05-18 13:39:26 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:39:26 [INFO] Prompt ID: cb8e6e48-1bf7-4248-9d9e-947c708ffc75
+2025-05-18 13:39:26 [INFO] Generating new code...
+2025-05-18 13:39:26 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Summarize values for total cases pm and total deaths pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:39:29 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:39:29 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+sql_query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+
+df_result = execute_sql_query(sql_query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:39:29 [INFO] Validating code requirements...
+2025-05-18 13:39:29 [INFO] Code validation successful.
+2025-05-18 13:39:29 [INFO] Cleaning the generated code...
+2025-05-18 13:39:29 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+df_result = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:39:30 [INFO] Response generated successfully.
+2025-05-18 13:39:37 [INFO] Question: Show me some information about the data
+2025-05-18 13:39:37 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:39:37 [INFO] Prompt ID: 8ff1b0e6-bf40-4dc4-b519-81a8bf22daed
+2025-05-18 13:39:37 [INFO] Generating new code...
+2025-05-18 13:39:37 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me some information about the data
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:39:40 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:39:40 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+sql_query = """
+SELECT *
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+LIMIT 5;
+"""
+
+df_result = execute_sql_query(sql_query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:39:40 [INFO] Validating code requirements...
+2025-05-18 13:39:40 [INFO] Code validation successful.
+2025-05-18 13:39:40 [INFO] Cleaning the generated code...
+2025-05-18 13:39:40 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT *
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+LIMIT 5;
+"""
+df_result = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:39:40 [INFO] Response generated successfully.
+2025-05-18 13:40:32 [INFO] Question: Summarize values for total cases pm and total deaths pm.
+2025-05-18 13:40:32 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:40:32 [INFO] Prompt ID: e30a67cb-9acf-41f1-adff-896ce4397d25
+2025-05-18 13:40:32 [INFO] Generating new code...
+2025-05-18 13:40:33 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Summarize values for total cases pm and total deaths pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:40:37 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:40:37 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+def execute_sql_query(sql_query: str) -> pd.Dataframe:
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+    # Replace this with actual database connection and query execution logic
+    # For demonstration, we'll create a dummy dataframe
+    data = {'col1': [1, 2, 3], 'col2': [4, 5, 6]}
+    return pd.DataFrame(data)
+
+sql_query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+
+result_df = execute_sql_query(sql_query)
+
+# Declare result var: 
+result = {"type": "dataframe", "value": result_df}
+2025-05-18 13:40:37 [INFO] Validating code requirements...
+2025-05-18 13:40:37 [INFO] Code validation successful.
+2025-05-18 13:40:37 [INFO] Cleaning the generated code...
+2025-05-18 13:40:37 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+result_df = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': result_df}
+2025-05-18 13:40:37 [INFO] Response generated successfully.
+2025-05-18 13:43:20 [INFO] Question: Show me some information about the data
+2025-05-18 13:43:20 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:43:20 [INFO] Prompt ID: 507cddbe-cfd0-4f10-8dc3-6c892eb42731
+2025-05-18 13:43:20 [INFO] Generating new code...
+2025-05-18 13:43:20 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me some information about the data
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:43:24 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:43:24 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+sql_query = """
+SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5;
+"""
+df_result = execute_sql_query(sql_query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:43:24 [INFO] Validating code requirements...
+2025-05-18 13:43:24 [INFO] Code validation successful.
+2025-05-18 13:43:24 [INFO] Cleaning the generated code...
+2025-05-18 13:43:24 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5;
+"""
+df_result = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:43:24 [INFO] Response generated successfully.
+2025-05-18 13:44:16 [INFO] Question: Show me some information about the data
+2025-05-18 13:44:16 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:44:16 [INFO] Prompt ID: 0b628ac0-4693-4d5c-bada-ebc1165da144
+2025-05-18 13:44:16 [INFO] Generating new code...
+2025-05-18 13:44:16 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me some information about the data
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:44:19 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:44:19 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT *
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+LIMIT 5;
+"""
+
+df_result = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:44:19 [INFO] Validating code requirements...
+2025-05-18 13:44:19 [INFO] Code validation successful.
+2025-05-18 13:44:19 [INFO] Cleaning the generated code...
+2025-05-18 13:44:19 [INFO] Executing code: import pandas as pd
+query = """
+SELECT *
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+LIMIT 5;
+"""
+df_result = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:44:19 [INFO] Response generated successfully.
+2025-05-18 13:44:19 [INFO] Question: Show me some information about the data
+2025-05-18 13:44:19 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:44:19 [INFO] Prompt ID: 4cdb9747-c8f2-4d5c-a850-291165f0c17a
+2025-05-18 13:44:19 [INFO] Generating new code...
+2025-05-18 13:44:19 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me some information about the data
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:44:23 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:44:23 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+sql_query = """
+SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5;
+"""
+df_result = execute_sql_query(sql_query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:44:23 [INFO] Validating code requirements...
+2025-05-18 13:44:23 [INFO] Code validation successful.
+2025-05-18 13:44:23 [INFO] Cleaning the generated code...
+2025-05-18 13:44:23 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5;
+"""
+df_result = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:44:23 [INFO] Response generated successfully.
+2025-05-18 13:44:23 [INFO] Question: Show me some information about the data
+2025-05-18 13:44:23 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:44:23 [INFO] Prompt ID: 850e2fd4-08ab-4bd2-864b-2f6ca4f63765
+2025-05-18 13:44:23 [INFO] Generating new code...
+2025-05-18 13:44:23 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show me some information about the data
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:44:26 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:44:26 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+sql_query = """
+SELECT *
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+LIMIT 5;
+"""
+
+df_result = execute_sql_query(sql_query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:44:26 [INFO] Validating code requirements...
+2025-05-18 13:44:26 [INFO] Code validation successful.
+2025-05-18 13:44:26 [INFO] Cleaning the generated code...
+2025-05-18 13:44:26 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT *
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+LIMIT 5;
+"""
+df_result = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:44:26 [INFO] Response generated successfully.
+2025-05-18 13:44:26 [INFO] Question: Show first five rows
+2025-05-18 13:44:26 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:44:26 [INFO] Prompt ID: bffe917d-4806-4777-b9de-41c5cfba69e0
+2025-05-18 13:44:26 [INFO] Generating new code...
+2025-05-18 13:44:26 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show first five rows
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:44:31 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:44:31 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+def execute_sql_query(sql_query: str) -> pd.Dataframe:
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+    # Use sqlalchemy to connect to database and execute query. Replace 'your_database_connection_string' with your actual connection string.
+    # Example using duckdb:
+    import duckdb
+    conn = duckdb.connect() # Or connect to your database using your preferred method.
+    result = conn.execute(sql_query).df()
+    conn.close()
+    return result
+
+
+sql_query = """
+SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5
+"""
+
+result_df = execute_sql_query(sql_query)
+
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": result_df}
+2025-05-18 13:44:31 [INFO] Validating code requirements...
+2025-05-18 13:44:31 [INFO] Code validation successful.
+2025-05-18 13:44:31 [INFO] Cleaning the generated code...
+2025-05-18 13:44:31 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT * FROM table_0bbd7d08fcf7f229e43759cacfd72270 LIMIT 5
+"""
+result_df = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': result_df}
+2025-05-18 13:44:31 [INFO] Response generated successfully.
+2025-05-18 13:44:31 [INFO] Question: show total cases for locations with the five most total cases
+2025-05-18 13:44:31 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:44:31 [INFO] Prompt ID: 6dd19a44-d1f2-4537-a928-f58a1876dcfb
+2025-05-18 13:44:31 [INFO] Generating new code...
+2025-05-18 13:44:31 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ show total cases for locations with the five most total cases
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:44:45 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:44:45 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+def execute_sql_query(sql_query: str) -> pd.Dataframe:
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+    # Assuming you have a way to connect to the database and execute queries
+    # Replace this with your actual implementation
+    try:
+      
+      from sqlalchemy import create_engine
+      engine = create_engine('duckdb:///:memory:')
+      
+      tables = {
+          "table_0bbd7d08fcf7f229e43759cacfd72270": pd.DataFrame({
+              "lastdate": pd.to_datetime(["2024-02-04", "2024-01-28", "2023-12-03", "2023-09-17", "2023-05-07"]),
+              "location": ["Afghanistan", "Albania", "Algeria", "American Samoa", "Andorra"],
+              "total_cases": [231539.0, 334863.0, 272010.0, 8359.0, 48015.0],
+              "total_deaths": [7982.0, 3605.0, 6881.0, 34.0, 159.0],
+              "total_cases_pm": [5629.611, 117813.348, 6057.694, 188712.044, 601367.684],
+              "total_deaths_pm": [194.073, 1268.331, 153.241, 767.581, 1991.408],
+              "population": [41128772, 2842318, 44903228, 44295, 79843],
+              "pop_density": [54.422, 104.871, 17.348, 278.205, 163.755],
+              "median_age": [18.6, 38.0, 29.1, None, None],
+              "gdp_per_capita": [1803.987, 11803.431, 13913.839, None, None],
+              "hosp_beds": [0.5, 2.89, 1.9, None, None],
+              "vac_per_hund": [None, None, None, None, None],
+              "aged_65_older": [2.581, 13.188, 6.211, None, None],
+              "life_expectancy": [64.83, 78.57, 76.88, 73.74, 83.73],
+              "hum_dev_ind": [0.511, 0.795, 0.748, None, 0.868],
+              "region": ["South Asia", "Eastern Europe", "North Africa", "Oceania / Aus", "Western Europe"]
+          })
+      }
+      for table_name, df in tables.items():
+          df.to_sql(table_name, engine, if_exists='replace', index=False)
+
+      df = pd.read_sql_query(sql_query, engine)
+      return df
+    except Exception as e:
+      print(f"Error executing SQL query: {e}")
+      return pd.DataFrame()
+
+
+
+sql_query = """
+SELECT total_cases, location
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+ORDER BY total_cases DESC
+LIMIT 5;
+"""
+
+df_result = execute_sql_query(sql_query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:44:45 [INFO] Validating code requirements...
+2025-05-18 13:44:45 [INFO] Code validation successful.
+2025-05-18 13:44:45 [INFO] Cleaning the generated code...
+2025-05-18 13:44:45 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT total_cases, location
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+ORDER BY total_cases DESC
+LIMIT 5;
+"""
+df_result = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:44:45 [INFO] Response generated successfully.
+2025-05-18 13:44:45 [INFO] Question: Show total cases pm, total deaths pm, and location for locations with the 10 highest total cases pm.
+2025-05-18 13:44:45 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:44:45 [INFO] Prompt ID: 4ca9cb85-0eaf-47fd-a4c0-7c9ec556b289
+2025-05-18 13:44:45 [INFO] Generating new code...
+2025-05-18 13:44:45 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show total cases pm, total deaths pm, and location for locations with the 10 highest total cases pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:44:57 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:44:57 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+def execute_sql_query(sql_query: str) -> pd.Dataframe:
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+    # This is a placeholder, replace with actual database connection and execution logic
+    # ... (Your database connection and query execution code) ...
+    # Example (using pandas for demonstration):
+    data = {'lastdate': ['2024-02-04', '2024-01-28', '2023-12-03', '2023-09-17', '2023-05-07'],
+            'location': ['Afghanistan', 'Albania', 'Algeria', 'American Samoa', 'Andorra'],
+            'total_cases': [231539.0, 334863.0, 272010.0, 8359.0, 48015.0],
+            'total_deaths': [7982.0, 3605.0, 6881.0, 34.0, 159.0],
+            'total_cases_pm': [5629.611, 117813.348, 6057.694, 188712.044, 601367.684],
+            'total_deaths_pm': [194.073, 1268.331, 153.241, 767.581, 1991.408],
+            'population': [41128772, 2842318, 44903228, 44295, 79843],
+            'pop_density': [54.422, 104.871, 17.348, 278.205, 163.755],
+            'median_age': [18.6, 38.0, 29.1, None, None],
+            'gdp_per_capita': [1803.987, 11803.431, 13913.839, None, None],
+            'hosp_beds': [0.5, 2.89, 1.9, None, None],
+            'vac_per_hund': [None, None, None, None, None],
+            'aged_65_older': [2.581, 13.188, 6.211, None, None],
+            'life_expectancy': [64.83, 78.57, 76.88, 73.74, 83.73],
+            'hum_dev_ind': [0.511, 0.795, 0.748, None, 0.868],
+            'region': ['South Asia', 'Eastern Europe', 'North Africa', 'Oceania / Aus', 'Western Europe']}
+    df = pd.DataFrame(data)
+    return df
+    
+
+sql_query = """
+SELECT total_cases_pm, total_deaths_pm, location
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+ORDER BY total_cases_pm DESC
+LIMIT 10;
+
+"""
+
+df_result = execute_sql_query(sql_query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:44:57 [INFO] Validating code requirements...
+2025-05-18 13:44:57 [INFO] Code validation successful.
+2025-05-18 13:44:57 [INFO] Cleaning the generated code...
+2025-05-18 13:44:57 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT total_cases_pm, total_deaths_pm, location
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+ORDER BY total_cases_pm DESC
+LIMIT 10;
+
+"""
+df_result = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:44:57 [INFO] Response generated successfully.
+2025-05-18 13:44:57 [INFO] Question: Select total cases pm, total deaths pm, and location.
+2025-05-18 13:44:57 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:44:57 [INFO] Prompt ID: 7cea9e4a-a12d-436f-9177-9a6ff8c0182f
+2025-05-18 13:44:57 [INFO] Generating new code...
+2025-05-18 13:44:57 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Select total cases pm, total deaths pm, and location.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:45:00 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:45:00 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+sql_query = """
+SELECT total_cases_pm, total_deaths_pm, location
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+
+result_df = execute_sql_query(sql_query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": result_df}
+2025-05-18 13:45:00 [INFO] Validating code requirements...
+2025-05-18 13:45:00 [INFO] Code validation successful.
+2025-05-18 13:45:00 [INFO] Cleaning the generated code...
+2025-05-18 13:45:00 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT total_cases_pm, total_deaths_pm, location
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+result_df = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': result_df}
+2025-05-18 13:45:00 [INFO] Response generated successfully.
+2025-05-18 13:45:00 [INFO] Question: Show total cases pm and location where total cases pm greater than 95th percentile
+2025-05-18 13:45:00 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:45:00 [INFO] Prompt ID: 0dfa6a0a-6c1a-4c06-a48d-92f75a567909
+2025-05-18 13:45:00 [INFO] Generating new code...
+2025-05-18 13:45:00 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show total cases pm and location where total cases pm greater than 95th percentile
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:45:12 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:45:12 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+def execute_sql_query(sql_query: str) -> pd.Dataframe:
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+    # This is a placeholder, replace with actual database connection and query execution
+    # Example using pandas for demonstration:
+    data = {'lastdate': ['2024-02-04', '2024-01-28', '2023-12-03', '2023-09-17', '2023-05-07'],
+            'location': ['Afghanistan', 'Albania', 'Algeria', 'American Samoa', 'Andorra'],
+            'total_cases': [231539.0, 334863.0, 272010.0, 8359.0, 48015.0],
+            'total_deaths': [7982.0, 3605.0, 6881.0, 34.0, 159.0],
+            'total_cases_pm': [5629.611, 117813.348, 6057.694, 188712.044, 601367.684],
+            'total_deaths_pm': [194.073, 1268.331, 153.241, 767.581, 1991.408],
+            'population': [41128772, 2842318, 44903228, 44295, 79843],
+            'pop_density': [54.422, 104.871, 17.348, 278.205, 163.755],
+            'median_age': [18.6, 38.0, 29.1, None, None],
+            'gdp_per_capita': [1803.987, 11803.431, 13913.839, None, None],
+            'hosp_beds': [0.5, 2.89, 1.9, None, None],
+            'vac_per_hund': [None, None, None, None, None],
+            'aged_65_older': [2.581, 13.188, 6.211, None, None],
+            'life_expectancy': [64.83, 78.57, 76.88, 73.74, 83.73],
+            'hum_dev_ind': [0.511, 0.795, 0.748, None, 0.868],
+            'region': ['South Asia', 'Eastern Europe', 'North Africa', 'Oceania / Aus', 'Western Europe']}
+    df = pd.DataFrame(data)
+    return df.query(sql_query)
+
+
+query = """SELECT total_cases_pm, location from table_0bbd7d08fcf7f229e43759cacfd72270 WHERE total_cases_pm > ( SELECT quantile(total_cases_pm, 0.95) FROM table_0bbd7d08fcf7f229e43759cacfd72270)"""
+
+df_result = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:45:12 [INFO] Validating code requirements...
+2025-05-18 13:45:12 [INFO] Code validation successful.
+2025-05-18 13:45:12 [INFO] Cleaning the generated code...
+2025-05-18 13:45:12 [INFO] Executing code: import pandas as pd
+query = 'SELECT total_cases_pm, location from table_0bbd7d08fcf7f229e43759cacfd72270 WHERE total_cases_pm > ( SELECT quantile(total_cases_pm, 0.95) FROM table_0bbd7d08fcf7f229e43759cacfd72270)'
+df_result = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:45:12 [INFO] Response generated successfully.
+2025-05-18 13:45:41 [INFO] Question: Summarize values for total cases pm and total deaths pm.
+2025-05-18 13:45:41 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:45:41 [INFO] Prompt ID: 8f6eb71c-fd68-482f-8767-13ed86c4c475
+2025-05-18 13:45:41 [INFO] Generating new code...
+2025-05-18 13:45:41 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Summarize values for total cases pm and total deaths pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:45:44 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:45:44 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+result_df = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": result_df}
+2025-05-18 13:45:44 [INFO] Validating code requirements...
+2025-05-18 13:45:45 [INFO] Code validation successful.
+2025-05-18 13:45:45 [INFO] Cleaning the generated code...
+2025-05-18 13:45:45 [INFO] Executing code: import pandas as pd
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+result_df = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': result_df}
+2025-05-18 13:45:45 [INFO] Response generated successfully.
+2025-05-18 13:47:04 [INFO] Question: Summarize values for total cases pm and total deaths pm.
+2025-05-18 13:47:04 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:47:04 [INFO] Prompt ID: 95c179fc-ddec-45fa-9123-de94815cb272
+2025-05-18 13:47:04 [INFO] Generating new code...
+2025-05-18 13:47:04 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Summarize values for total cases pm and total deaths pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:47:08 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:47:08 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+result_df = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": result_df}
+2025-05-18 13:47:08 [INFO] Validating code requirements...
+2025-05-18 13:47:08 [INFO] Code validation successful.
+2025-05-18 13:47:08 [INFO] Cleaning the generated code...
+2025-05-18 13:47:08 [INFO] Executing code: import pandas as pd
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+result_df = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': result_df}
+2025-05-18 13:47:08 [INFO] Response generated successfully.
+2025-05-18 13:54:23 [INFO] Question: Summarize values for total cases pm and total deaths pm.
+2025-05-18 13:54:23 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:54:23 [INFO] Prompt ID: 0fef6b33-ad0a-483a-9b4b-2f204997299a
+2025-05-18 13:54:23 [INFO] Generating new code...
+2025-05-18 13:54:23 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Summarize values for total cases pm and total deaths pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:54:27 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:54:27 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+df_result = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 13:54:27 [INFO] Validating code requirements...
+2025-05-18 13:54:27 [INFO] Code validation successful.
+2025-05-18 13:54:27 [INFO] Cleaning the generated code...
+2025-05-18 13:54:27 [INFO] Executing code: import pandas as pd
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+df_result = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:54:27 [INFO] Response generated successfully.
+2025-05-18 13:54:39 [INFO] Question: Summarize values for total cases pm and total deaths pm.
+2025-05-18 13:54:39 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:54:39 [INFO] Prompt ID: 587f5bb4-47d6-47f8-927c-fe30cec1efc4
+2025-05-18 13:54:39 [INFO] Generating new code...
+2025-05-18 13:54:39 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Summarize values for total cases pm and total deaths pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:54:43 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:54:43 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+result_df = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": result_df}
+2025-05-18 13:54:43 [INFO] Validating code requirements...
+2025-05-18 13:54:43 [INFO] Code validation successful.
+2025-05-18 13:54:43 [INFO] Cleaning the generated code...
+2025-05-18 13:54:43 [INFO] Executing code: import pandas as pd
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+result_df = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': result_df}
+2025-05-18 13:54:43 [INFO] Response generated successfully.
+2025-05-18 13:55:14 [INFO] Question: Describe values for total cases pm and total deaths pm.
+2025-05-18 13:55:14 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:55:14 [INFO] Prompt ID: 5a4d30cd-1346-4bbd-af71-2401b2f63837
+2025-05-18 13:55:14 [INFO] Generating new code...
+2025-05-18 13:55:14 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Describe values for total cases pm and total deaths pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:55:18 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:55:18 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+sql_query = """
+SELECT 
+    MIN(total_cases_pm) AS min_total_cases_pm,
+    MAX(total_cases_pm) AS max_total_cases_pm,
+    AVG(total_cases_pm) AS avg_total_cases_pm,
+    MIN(total_deaths_pm) AS min_total_deaths_pm,
+    MAX(total_deaths_pm) AS max_total_deaths_pm,
+    AVG(total_deaths_pm) AS avg_total_deaths_pm
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+
+df_result = execute_sql_query(sql_query)
+
+
+result = {
+    "type": "dataframe",
+    "value": df_result
+}
+2025-05-18 13:55:18 [INFO] Validating code requirements...
+2025-05-18 13:55:18 [INFO] Code validation successful.
+2025-05-18 13:55:18 [INFO] Cleaning the generated code...
+2025-05-18 13:55:18 [INFO] Executing code: import pandas as pd
+sql_query = """
+SELECT 
+    MIN(total_cases_pm) AS min_total_cases_pm,
+    MAX(total_cases_pm) AS max_total_cases_pm,
+    AVG(total_cases_pm) AS avg_total_cases_pm,
+    MIN(total_deaths_pm) AS min_total_deaths_pm,
+    MAX(total_deaths_pm) AS max_total_deaths_pm,
+    AVG(total_deaths_pm) AS avg_total_deaths_pm
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+df_result = execute_sql_query(sql_query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 13:55:18 [INFO] Response generated successfully.
+2025-05-18 13:56:09 [INFO] Question: Describe values for total cases pm and total deaths pm.
+2025-05-18 13:56:09 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 13:56:09 [INFO] Prompt ID: 414b27ac-2c36-422f-9e03-809dde00494e
+2025-05-18 13:56:09 [INFO] Generating new code...
+2025-05-18 13:56:09 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Describe values for total cases pm and total deaths pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 13:56:14 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 13:56:14 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT 
+    MIN(total_cases_pm) AS min_total_cases_pm,
+    MAX(total_cases_pm) AS max_total_cases_pm,
+    AVG(total_cases_pm) AS avg_total_cases_pm,
+    MIN(total_deaths_pm) AS min_total_deaths_pm,
+    MAX(total_deaths_pm) AS max_total_deaths_pm,
+    AVG(total_deaths_pm) AS avg_total_deaths_pm
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+df_result = execute_sql_query(query)
+result_string = ""
+for index, row in df_result.iterrows():
+    result_string += f"Total Cases PM:\nMin: {row['min_total_cases_pm']}\nMax: {row['max_total_cases_pm']}\nAverage: {row['avg_total_cases_pm']}\n\n"
+    result_string += f"Total Deaths PM:\nMin: {row['min_total_deaths_pm']}\nMax: {row['max_total_deaths_pm']}\nAverage: {row['avg_total_deaths_pm']}"
+
+
+# Declare result var: 
+result = { "type": "string", "value": result_string }
+2025-05-18 13:56:14 [INFO] Validating code requirements...
+2025-05-18 13:56:14 [INFO] Code validation successful.
+2025-05-18 13:56:15 [INFO] Cleaning the generated code...
+2025-05-18 13:56:15 [INFO] Executing code: import pandas as pd
+query = """
+SELECT 
+    MIN(total_cases_pm) AS min_total_cases_pm,
+    MAX(total_cases_pm) AS max_total_cases_pm,
+    AVG(total_cases_pm) AS avg_total_cases_pm,
+    MIN(total_deaths_pm) AS min_total_deaths_pm,
+    MAX(total_deaths_pm) AS max_total_deaths_pm,
+    AVG(total_deaths_pm) AS avg_total_deaths_pm
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+df_result = execute_sql_query(query)
+result_string = ''
+for index, row in df_result.iterrows():
+    result_string += f"""Total Cases PM:
+Min: {row['min_total_cases_pm']}
+Max: {row['max_total_cases_pm']}
+Average: {row['avg_total_cases_pm']}
+
+"""
+    result_string += f"""Total Deaths PM:
+Min: {row['min_total_deaths_pm']}
+Max: {row['max_total_deaths_pm']}
+Average: {row['avg_total_deaths_pm']}"""
+result = {'type': 'string', 'value': result_string}
+2025-05-18 13:56:15 [INFO] Response generated successfully.
+2025-05-18 14:07:02 [INFO] Question: Plot the total_cases_pm column data distribution
+2025-05-18 14:07:02 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 14:07:02 [INFO] Prompt ID: a4dc0bed-f8ea-4d49-8a6b-0f83805f5a0a
+2025-05-18 14:07:02 [INFO] Generating new code...
+2025-05-18 14:07:02 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Plot the total_cases_pm column data distribution
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 14:07:10 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 14:07:10 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+# Write code here
+def execute_sql_query(sql_query: str) -> pd.Dataframe:
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+    # Assuming a connection string, replace with your specific information
+    conn_string = "duckdb:///memory" 
+    
+    try:
+        import duckdb
+        conn = duckdb.connect(conn_string)
+        df = conn.execute(sql_query).fetchdf()
+        conn.close()
+        return df
+    except Exception as e:  # Catching generic exceptions for demonstration
+        print(f"An error occurred: {e}")
+        return None
+
+
+sql_query = """
+SELECT total_cases_pm FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+
+df = execute_sql_query(sql_query)
+
+if df is not None:
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['total_cases_pm'], kde=True)
+    plt.title('Distribution of Total Cases Per Million')
+    plt.xlabel('Total Cases Per Million')
+    plt.ylabel('Frequency')
+    
+    chart_filename = "temp_chart.png"  # Temporary filename
+    plt.savefig(chart_filename)
+    plt.close() # Close the plot to free memory
+
+    result = {"type": "plot", "value": chart_filename}
+else:
+    result = {"type": "string", "value": "Error executing SQL query or processing data."}
+
+
+
+# Declare result var: 
+# type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+2025-05-18 14:07:10 [INFO] Validating code requirements...
+2025-05-18 14:07:10 [INFO] Code validation successful.
+2025-05-18 14:07:10 [INFO] Cleaning the generated code...
+2025-05-18 14:07:10 [INFO] Executing code: import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+sql_query = """
+SELECT total_cases_pm FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+df = execute_sql_query(sql_query)
+if df is not None:
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['total_cases_pm'], kde=True)
+    plt.title('Distribution of Total Cases Per Million')
+    plt.xlabel('Total Cases Per Million')
+    plt.ylabel('Frequency')
+    chart_filename = 'exports/charts/temp_chart_70e7d1f6-f309-4816-b314-a45380dbd11e.png'
+    plt.savefig(chart_filename)
+    plt.close()
+    result = {'type': 'plot', 'value': chart_filename}
+else:
+    result = {'type': 'string', 'value': 'Error executing SQL query or processing data.'}
+2025-05-18 14:07:49 [INFO] Retrying execution (1/3)...
+2025-05-18 14:07:49 [INFO] Execution failed with error: Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 29, in execute
+    exec(code, self._environment)
+  File "<string>", line 16, in <module>
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/pyplot.py", line 1023, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/figure.py", line 3378, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2366, in print_figure
+    result = print_method(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2232, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 509, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 458, in _print_pil
+    mpl.image.imsave(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/image.py", line 1689, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/PIL/Image.py", line 2563, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/tinle/Labs/DataScience/PythonDataCleansing/chap03/exports/charts/temp_chart_70e7d1f6-f309-4816-b314-a45380dbd11e.png'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 186, in execute_with_retries
+    result = self.execute_code(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 118, in execute_code
+    return code_executor.execute_and_return_result(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 38, in execute_and_return_result
+    self.execute(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 31, in execute
+    raise CodeExecutionError("Code execution failed") from e
+pandasai.exceptions.CodeExecutionError: Code execution failed
+
+2025-05-18 14:07:49 [INFO] Using Prompt: <table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+The user asked the following question:
+### QUERY
+ Plot the total_cases_pm column data distribution
+
+You generated the following Python code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+sql_query = """
+SELECT total_cases_pm FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+df = execute_sql_query(sql_query)
+if df is not None:
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['total_cases_pm'], kde=True)
+    plt.title('Distribution of Total Cases Per Million')
+    plt.xlabel('Total Cases Per Million')
+    plt.ylabel('Frequency')
+    chart_filename = 'exports/charts/temp_chart_70e7d1f6-f309-4816-b314-a45380dbd11e.png'
+    plt.savefig(chart_filename)
+    plt.close()
+    result = {'type': 'plot', 'value': chart_filename}
+else:
+    result = {'type': 'string', 'value': 'Error executing SQL query or processing data.'}
+
+However, it resulted in the following error:
+Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 29, in execute
+    exec(code, self._environment)
+  File "<string>", line 16, in <module>
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/pyplot.py", line 1023, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/figure.py", line 3378, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2366, in print_figure
+    result = print_method(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2232, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 509, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 458, in _print_pil
+    mpl.image.imsave(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/image.py", line 1689, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/PIL/Image.py", line 2563, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/tinle/Labs/DataScience/PythonDataCleansing/chap03/exports/charts/temp_chart_70e7d1f6-f309-4816-b314-a45380dbd11e.png'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 186, in execute_with_retries
+    result = self.execute_code(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 118, in execute_code
+    return code_executor.execute_and_return_result(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 38, in execute_and_return_result
+    self.execute(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 31, in execute
+    raise CodeExecutionError("Code execution failed") from e
+pandasai.exceptions.CodeExecutionError: Code execution failed
+
+
+Fix the python code above and return the new python code but the code generated should use execute_sql_query function
+2025-05-18 14:07:56 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 14:07:56 [INFO] Code Generated:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+
+sql_query = """
+SELECT total_cases_pm FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+df = execute_sql_query(sql_query)
+
+if df is not None:
+    # Create the directory if it doesn't exist
+    chart_dir = 'exports/charts'
+    os.makedirs(chart_dir, exist_ok=True)
+
+
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['total_cases_pm'], kde=True)
+    plt.title('Distribution of Total Cases Per Million')
+    plt.xlabel('Total Cases Per Million')
+    plt.ylabel('Frequency')
+    chart_filename = os.path.join(chart_dir, 'temp_chart_70e7d1f6-f309-4816-b314-a45380dbd11e.png')
+    plt.savefig(chart_filename)
+    plt.close()
+    result = {'type': 'plot', 'value': chart_filename}
+else:
+    result = {'type': 'string', 'value': 'Error executing SQL query or processing data.'}
+2025-05-18 14:07:56 [INFO] Validating code requirements...
+2025-05-18 14:07:56 [INFO] Code validation successful.
+2025-05-18 14:07:56 [INFO] Cleaning the generated code...
+2025-05-18 14:07:56 [INFO] Executing code: import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+sql_query = """
+SELECT total_cases_pm FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+df = execute_sql_query(sql_query)
+if df is not None:
+    chart_dir = 'exports/charts'
+    os.makedirs(chart_dir, exist_ok=True)
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['total_cases_pm'], kde=True)
+    plt.title('Distribution of Total Cases Per Million')
+    plt.xlabel('Total Cases Per Million')
+    plt.ylabel('Frequency')
+    chart_filename = os.path.join(chart_dir, 'exports/charts/temp_chart_21768b30-c242-462b-a2c7-814a136e6044.png')
+    plt.savefig(chart_filename)
+    plt.close()
+    result = {'type': 'plot', 'value': chart_filename}
+else:
+    result = {'type': 'string', 'value': 'Error executing SQL query or processing data.'}
+2025-05-18 14:07:56 [INFO] Retrying execution (2/3)...
+2025-05-18 14:07:56 [INFO] Execution failed with error: Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 29, in execute
+    exec(code, self._environment)
+  File "<string>", line 18, in <module>
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/pyplot.py", line 1023, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/figure.py", line 3378, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2366, in print_figure
+    result = print_method(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2232, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 509, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 458, in _print_pil
+    mpl.image.imsave(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/image.py", line 1689, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/PIL/Image.py", line 2563, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/tinle/Labs/DataScience/PythonDataCleansing/chap03/exports/charts/exports/charts/temp_chart_21768b30-c242-462b-a2c7-814a136e6044.png'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 186, in execute_with_retries
+    result = self.execute_code(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 118, in execute_code
+    return code_executor.execute_and_return_result(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 38, in execute_and_return_result
+    self.execute(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 31, in execute
+    raise CodeExecutionError("Code execution failed") from e
+pandasai.exceptions.CodeExecutionError: Code execution failed
+
+2025-05-18 14:07:56 [INFO] Using Prompt: <table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+The user asked the following question:
+### QUERY
+ Plot the total_cases_pm column data distribution
+
+You generated the following Python code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+sql_query = """
+SELECT total_cases_pm FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+df = execute_sql_query(sql_query)
+if df is not None:
+    chart_dir = 'exports/charts'
+    os.makedirs(chart_dir, exist_ok=True)
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['total_cases_pm'], kde=True)
+    plt.title('Distribution of Total Cases Per Million')
+    plt.xlabel('Total Cases Per Million')
+    plt.ylabel('Frequency')
+    chart_filename = os.path.join(chart_dir, 'exports/charts/temp_chart_21768b30-c242-462b-a2c7-814a136e6044.png')
+    plt.savefig(chart_filename)
+    plt.close()
+    result = {'type': 'plot', 'value': chart_filename}
+else:
+    result = {'type': 'string', 'value': 'Error executing SQL query or processing data.'}
+
+However, it resulted in the following error:
+Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 29, in execute
+    exec(code, self._environment)
+  File "<string>", line 18, in <module>
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/pyplot.py", line 1023, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/figure.py", line 3378, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2366, in print_figure
+    result = print_method(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2232, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 509, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 458, in _print_pil
+    mpl.image.imsave(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/image.py", line 1689, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/PIL/Image.py", line 2563, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/tinle/Labs/DataScience/PythonDataCleansing/chap03/exports/charts/exports/charts/temp_chart_21768b30-c242-462b-a2c7-814a136e6044.png'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 186, in execute_with_retries
+    result = self.execute_code(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 118, in execute_code
+    return code_executor.execute_and_return_result(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 38, in execute_and_return_result
+    self.execute(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 31, in execute
+    raise CodeExecutionError("Code execution failed") from e
+pandasai.exceptions.CodeExecutionError: Code execution failed
+
+
+Fix the python code above and return the new python code but the code generated should use execute_sql_query function
+2025-05-18 14:08:02 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 14:08:02 [INFO] Code Generated:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+sql_query = """
+SELECT total_cases_pm FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+df = execute_sql_query(sql_query)
+if df is not None:
+    chart_dir = 'exports/charts'
+    os.makedirs(chart_dir, exist_ok=True)
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['total_cases_pm'], kde=True)
+    plt.title('Distribution of Total Cases Per Million')
+    plt.xlabel('Total Cases Per Million')
+    plt.ylabel('Frequency')
+    chart_filename = os.path.join(chart_dir, 'temp_chart.png') # Fixed filename
+    plt.savefig(chart_filename)
+    plt.close()
+    result = {'type': 'plot', 'value': chart_filename}
+else:
+    result = {'type': 'string', 'value': 'Error executing SQL query or processing data.'}
+2025-05-18 14:08:02 [INFO] Validating code requirements...
+2025-05-18 14:08:02 [INFO] Code validation successful.
+2025-05-18 14:08:02 [INFO] Cleaning the generated code...
+2025-05-18 14:08:02 [INFO] Executing code: import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+sql_query = """
+SELECT total_cases_pm FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+df = execute_sql_query(sql_query)
+if df is not None:
+    chart_dir = 'exports/charts'
+    os.makedirs(chart_dir, exist_ok=True)
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['total_cases_pm'], kde=True)
+    plt.title('Distribution of Total Cases Per Million')
+    plt.xlabel('Total Cases Per Million')
+    plt.ylabel('Frequency')
+    chart_filename = os.path.join(chart_dir, 'exports/charts/temp_chart_bef9e314-60ad-4ca4-8743-bc642aff0add.png')
+    plt.savefig(chart_filename)
+    plt.close()
+    result = {'type': 'plot', 'value': chart_filename}
+else:
+    result = {'type': 'string', 'value': 'Error executing SQL query or processing data.'}
+2025-05-18 14:08:02 [INFO] Retrying execution (3/3)...
+2025-05-18 14:08:02 [INFO] Execution failed with error: Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 29, in execute
+    exec(code, self._environment)
+  File "<string>", line 18, in <module>
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/pyplot.py", line 1023, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/figure.py", line 3378, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2366, in print_figure
+    result = print_method(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2232, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 509, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 458, in _print_pil
+    mpl.image.imsave(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/image.py", line 1689, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/PIL/Image.py", line 2563, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/tinle/Labs/DataScience/PythonDataCleansing/chap03/exports/charts/exports/charts/temp_chart_bef9e314-60ad-4ca4-8743-bc642aff0add.png'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 186, in execute_with_retries
+    result = self.execute_code(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 118, in execute_code
+    return code_executor.execute_and_return_result(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 38, in execute_and_return_result
+    self.execute(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 31, in execute
+    raise CodeExecutionError("Code execution failed") from e
+pandasai.exceptions.CodeExecutionError: Code execution failed
+
+2025-05-18 14:08:02 [INFO] Using Prompt: <table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+The user asked the following question:
+### QUERY
+ Plot the total_cases_pm column data distribution
+
+You generated the following Python code:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+sql_query = """
+SELECT total_cases_pm FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+df = execute_sql_query(sql_query)
+if df is not None:
+    chart_dir = 'exports/charts'
+    os.makedirs(chart_dir, exist_ok=True)
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['total_cases_pm'], kde=True)
+    plt.title('Distribution of Total Cases Per Million')
+    plt.xlabel('Total Cases Per Million')
+    plt.ylabel('Frequency')
+    chart_filename = os.path.join(chart_dir, 'exports/charts/temp_chart_bef9e314-60ad-4ca4-8743-bc642aff0add.png')
+    plt.savefig(chart_filename)
+    plt.close()
+    result = {'type': 'plot', 'value': chart_filename}
+else:
+    result = {'type': 'string', 'value': 'Error executing SQL query or processing data.'}
+
+However, it resulted in the following error:
+Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 29, in execute
+    exec(code, self._environment)
+  File "<string>", line 18, in <module>
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/pyplot.py", line 1023, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/figure.py", line 3378, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2366, in print_figure
+    result = print_method(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2232, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 509, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 458, in _print_pil
+    mpl.image.imsave(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/image.py", line 1689, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/PIL/Image.py", line 2563, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/tinle/Labs/DataScience/PythonDataCleansing/chap03/exports/charts/exports/charts/temp_chart_bef9e314-60ad-4ca4-8743-bc642aff0add.png'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 186, in execute_with_retries
+    result = self.execute_code(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 118, in execute_code
+    return code_executor.execute_and_return_result(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 38, in execute_and_return_result
+    self.execute(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 31, in execute
+    raise CodeExecutionError("Code execution failed") from e
+pandasai.exceptions.CodeExecutionError: Code execution failed
+
+
+Fix the python code above and return the new python code but the code generated should use execute_sql_query function
+2025-05-18 14:08:08 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 14:08:08 [INFO] Code Generated:
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+sql_query = """
+SELECT total_cases_pm FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+df = execute_sql_query(sql_query)
+if df is not None:
+    chart_dir = 'exports/charts'
+    os.makedirs(chart_dir, exist_ok=True)
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['total_cases_pm'], kde=True)
+    plt.title('Distribution of Total Cases Per Million')
+    plt.xlabel('Total Cases Per Million')
+    plt.ylabel('Frequency')
+    chart_filename = os.path.join(chart_dir, 'temp_chart.png') # Fixed filename
+    plt.savefig(chart_filename)
+    plt.close()
+    result = {'type': 'plot', 'value': chart_filename}
+else:
+    result = {'type': 'string', 'value': 'Error executing SQL query or processing data.'}
+2025-05-18 14:08:08 [INFO] Validating code requirements...
+2025-05-18 14:08:08 [INFO] Code validation successful.
+2025-05-18 14:08:08 [INFO] Cleaning the generated code...
+2025-05-18 14:08:08 [INFO] Executing code: import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+import os
+sql_query = """
+SELECT total_cases_pm FROM table_0bbd7d08fcf7f229e43759cacfd72270
+"""
+df = execute_sql_query(sql_query)
+if df is not None:
+    chart_dir = 'exports/charts'
+    os.makedirs(chart_dir, exist_ok=True)
+    plt.figure(figsize=(10, 6))
+    sns.histplot(df['total_cases_pm'], kde=True)
+    plt.title('Distribution of Total Cases Per Million')
+    plt.xlabel('Total Cases Per Million')
+    plt.ylabel('Frequency')
+    chart_filename = os.path.join(chart_dir, 'exports/charts/temp_chart_e3048303-8ce4-47d0-b89f-69b396a50fb5.png')
+    plt.savefig(chart_filename)
+    plt.close()
+    result = {'type': 'plot', 'value': chart_filename}
+else:
+    result = {'type': 'string', 'value': 'Error executing SQL query or processing data.'}
+2025-05-18 14:08:08 [INFO] Max retries reached. Error: Code execution failed
+2025-05-18 14:08:08 [INFO] Processing failed with error: Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 29, in execute
+    exec(code, self._environment)
+  File "<string>", line 18, in <module>
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/pyplot.py", line 1023, in savefig
+    res = fig.savefig(*args, **kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/figure.py", line 3378, in savefig
+    self.canvas.print_figure(fname, **kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2366, in print_figure
+    result = print_method(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backend_bases.py", line 2232, in <lambda>
+    print_method = functools.wraps(meth)(lambda *args, **kwargs: meth(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 509, in print_png
+    self._print_pil(filename_or_obj, "png", pil_kwargs, metadata)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/backends/backend_agg.py", line 458, in _print_pil
+    mpl.image.imsave(
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/matplotlib/image.py", line 1689, in imsave
+    image.save(fname, **pil_kwargs)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/PIL/Image.py", line 2563, in save
+    fp = builtins.open(filename, "w+b")
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/tinle/Labs/DataScience/PythonDataCleansing/chap03/exports/charts/exports/charts/temp_chart_e3048303-8ce4-47d0-b89f-69b396a50fb5.png'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 267, in _process_query
+    result = self.execute_with_retries(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 186, in execute_with_retries
+    result = self.execute_code(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/agent/base.py", line 118, in execute_code
+    return code_executor.execute_and_return_result(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 38, in execute_and_return_result
+    self.execute(code)
+  File "/Users/tinle/Labs/DataScience/PythonDataCleansing/.venv/lib/python3.9/site-packages/pandasai/core/code_execution/code_executor.py", line 31, in execute
+    raise CodeExecutionError("Code execution failed") from e
+pandasai.exceptions.CodeExecutionError: Code execution failed
+
+2025-05-18 14:08:41 [INFO] Question: Summarize values for total cases pm and total deaths pm.
+2025-05-18 14:08:41 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 14:08:42 [INFO] Prompt ID: 5b0e5b80-48f2-411e-b20f-b5caed658035
+2025-05-18 14:08:42 [INFO] Generating new code...
+2025-05-18 14:08:42 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Summarize values for total cases pm and total deaths pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 14:08:45 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 14:08:45 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+df_result = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 14:08:45 [INFO] Validating code requirements...
+2025-05-18 14:08:45 [INFO] Code validation successful.
+2025-05-18 14:08:45 [INFO] Cleaning the generated code...
+2025-05-18 14:08:45 [INFO] Executing code: import pandas as pd
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+df_result = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 14:08:45 [INFO] Response generated successfully.
+2025-05-18 14:09:11 [INFO] Question: Show sum of total cases and total deaths by region.
+2025-05-18 14:09:11 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 14:09:11 [INFO] Prompt ID: 0400d458-1e19-4ab0-a690-e51436bf8d91
+2025-05-18 14:09:11 [INFO] Generating new code...
+2025-05-18 14:09:11 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Show sum of total cases and total deaths by region.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 14:09:14 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 14:09:14 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT region, SUM(total_cases) AS total_cases_sum, SUM(total_deaths) AS total_deaths_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+GROUP BY region;
+"""
+df_result = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 14:09:14 [INFO] Validating code requirements...
+2025-05-18 14:09:14 [INFO] Code validation successful.
+2025-05-18 14:09:14 [INFO] Cleaning the generated code...
+2025-05-18 14:09:14 [INFO] Executing code: import pandas as pd
+query = """
+SELECT region, SUM(total_cases) AS total_cases_sum, SUM(total_deaths) AS total_deaths_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270
+GROUP BY region;
+"""
+df_result = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 14:09:15 [INFO] Response generated successfully.
+2025-05-18 14:09:26 [INFO] Question: Summarize values for total cases pm and total deaths pm.
+2025-05-18 14:09:26 [INFO] Running PandaAI with litellm LLM...
+2025-05-18 14:09:26 [INFO] Prompt ID: 75393222-d700-4222-bc08-7cdc73c3ea84
+2025-05-18 14:09:26 [INFO] Generating new code...
+2025-05-18 14:09:26 [INFO] Using Prompt: <tables>
+
+<table dialect="duckdb" table_name="table_0bbd7d08fcf7f229e43759cacfd72270" dimensions="231x16">
+lastdate,location,total_cases,total_deaths,total_cases_pm,total_deaths_pm,population,pop_density,median_age,gdp_per_capita,hosp_beds,vac_per_hund,aged_65_older,life_expectancy,hum_dev_ind,region
+2024-02-04,Afghanistan,231539.0,7982.0,5629.611,194.073,41128772,54.422,18.6,1803.987,0.5,,2.581,64.83,0.511,South Asia
+2024-01-28,Albania,334863.0,3605.0,117813.348,1268.331,2842318,104.871,38.0,11803.431,2.89,,13.188,78.57,0.795,Eastern Europe
+2023-12-03,Algeria,272010.0,6881.0,6057.694,153.241,44903228,17.348,29.1,13913.839,1.9,,6.211,76.88,0.748,North Africa
+2023-09-17,American Samoa,8359.0,34.0,188712.044,767.581,44295,278.205,,,,,,73.74,,Oceania / Aus
+2023-05-07,Andorra,48015.0,159.0,601367.684,1991.408,79843,163.755,,,,,,83.73,0.868,Western Europe
+</table>
+
+
+</tables>
+
+You are already provided with the following functions that you can call:
+<function>
+def execute_sql_query(sql_query: str) -> pd.Dataframe
+    """This method connects to the database, executes the sql query and returns the dataframe"""
+</function>
+
+
+Update this initial code:
+```python
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+
+# Declare result var: 
+type (possible values "string", "number", "dataframe", "plot"). Examples: { "type": "string", "value": f"The highest salary is {highest_salary}." } or { "type": "number", "value": 125 } or { "type": "dataframe", "value": pd.DataFrame({...}) } or { "type": "plot", "value": "temp_chart.png" }
+
+```
+
+
+
+### QUERY
+ Summarize values for total cases pm and total deaths pm.
+
+At the end, declare "result" variable as a dictionary of type and value.
+
+
+Generate python code and return full updated code:
+
+### Note: Use only relevant table for query and do aggregation, sorting, joins and grouby through sql query
+2025-05-18 14:09:30 [INFO] HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent?key=AIzaSyCz0sJjoIyzejmnpcaSD-fdsar5PL-PNU0 "HTTP/1.1 200 OK"
+2025-05-18 14:09:30 [INFO] Code Generated:
+# TODO: import the required dependencies
+import pandas as pd
+
+# Write code here
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+df_result = execute_sql_query(query)
+
+
+# Declare result var: 
+result = {"type": "dataframe", "value": df_result}
+2025-05-18 14:09:30 [INFO] Validating code requirements...
+2025-05-18 14:09:30 [INFO] Code validation successful.
+2025-05-18 14:09:30 [INFO] Cleaning the generated code...
+2025-05-18 14:09:30 [INFO] Executing code: import pandas as pd
+query = """
+SELECT 
+    SUM(total_cases_pm) AS total_cases_pm_sum,
+    SUM(total_deaths_pm) AS total_deaths_pm_sum
+FROM table_0bbd7d08fcf7f229e43759cacfd72270;
+"""
+df_result = execute_sql_query(query)
+result = {'type': 'dataframe', 'value': df_result}
+2025-05-18 14:09:30 [INFO] Response generated successfully.
