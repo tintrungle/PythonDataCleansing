@@ -1,3 +1,5 @@
 .venv
 .vscode
+.conda
+requirements.txt
 *.log
