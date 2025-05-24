@@ -2,4 +2,5 @@
 .vscode
 .conda
 requirements.txt
+exports
 *.log
